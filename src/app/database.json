@@ -1,0 +1,250 @@
+{
+  "users": [
+    {
+      "name": "Shyamlata",
+      "email": "shyamlata65@gmail.com",
+      "id": 1,
+      "verification": false,
+      "password": "Shyamlata@123",
+      "cPassword": "Shyamlata@123",
+      "cart": []
+    }
+    
+  ],
+  "Products": {
+    "Products": [
+      {
+        "src": "assets/images/560.jpg",
+        "title": "Milange",
+        "price": 600,
+        "description": "Roam around with comfort-Printed t-Shirts",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (1).jpg",
+        "title": "Tops by Only",
+        "price": 500,
+        "description": " Summer wear Soft Cotton Tops and many more",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (2).jpg",
+        "title": "Fashion",
+        "price": 700,
+        "description": "Roam around with comfort-Printed t-Shirts",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (1).jpg",
+        "title": "Tops by Only",
+        "price": 500,
+        "description": " Summer wear Soft Cotton Tops and many more",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/nike.jpg",
+        "title": "Nike",
+        "price": 6000,
+        "description": "For a secure and easy fit, check this out. Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/Hushpuppies-1.jpg",
+        "title": "Zara",
+        "price": 5000,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/adidas.jpeg",
+        "title": "Adidas",
+        "price": 7999,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/Hushpuppies-1.jpg",
+        "title": "Zara",
+        "price": 5000,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion1.jpg",
+        "title": "Cushions",
+        "price": 999,
+        "description": "For comfortable spaces, add these cushions.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion2.jpg",
+        "title": "Pillow",
+        "price": 1299,
+        "description": "Colorful Khadi cotton cushion covers.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion3.jpg",
+        "title": "Covers",
+        "price": 890,
+        "description": "cotton covers - hand wash only",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion1.jpg",
+        "title": "Cushions",
+        "price": 999,
+        "description": "For comfortable spaces, add these cushions.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/dell.jpg",
+        "title": "Dell",
+        "price": 70000,
+        "description": "14'inches Dell laptop with 8GB RAM and SSD",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/macbook.jpg",
+        "title": "Macbook",
+        "price": 90000,
+        "description": "Brand new 15'inches Macbook-air (10%off)",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/laptopcase.jpg",
+        "title": "Cases",
+        "price": 18000,
+        "description": "Fits all size for 14-15'inches laptop easily.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/dell.jpg",
+        "title": "Dell",
+        "price": 70000,
+        "description": "14'inches Dell laptop with 8GB RAM and SSD",
+        "quantity": 0
+      }
+    ],
+    "Clothing": [
+      {
+        "src": "assets/images/560.jpg",
+        "title": "Milange",
+        "price": 600,
+        "description": "Roam around with comfort-Printed t-Shirts",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (1).jpg",
+        "title": "Tops by Only",
+        "price": 500,
+        "description": " Summer wear Soft Cotton Tops and many more",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (2).jpg",
+        "title": "Fashion",
+        "price": 700,
+        "description": "Roam around with comfort-Printed t-Shirts",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/560 (1).jpg",
+        "title": "Tops by Only",
+        "price": 500,
+        "description": " Summer wear Soft Cotton Tops and many more",
+        "quantity": 0
+      }
+    ],
+    "Footwear": [
+      {
+        "src": "assets/images/nike.jpg",
+        "title": "Nike",
+        "price": 6000,
+        "description": "For a secure and easy fit, check this out. Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/Hushpuppies-1.jpg",
+        "title": "Zara",
+        "price": 5000,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/adidas.jpeg",
+        "title": "Adidas",
+        "price": 7999,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/Hushpuppies-1.jpg",
+        "title": "Zara",
+        "price": 5000,
+        "description": "For a secure and easy fit, check this out.Hurry!!",
+        "quantity": 0
+      }
+    ],
+    "HomeDecor": [
+      {
+        "src": "assets/images/cushion1.jpg",
+        "title": "Cushions",
+        "price": 999,
+        "description": "For comfortable spaces, add these cushions.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion2.jpg",
+        "title": "Pillow",
+        "price": 1299,
+        "description": "Colorful Khadi cotton cushion covers.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion3.jpg",
+        "title": "Covers",
+        "price": 890,
+        "description": "cotton covers - hand wash only",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/cushion1.jpg",
+        "title": "Cushions",
+        "price": 999,
+        "description": "For comfortable spaces, add these cushions.",
+        "quantity": 0
+      }
+    ],
+    "Electronics": [
+      {
+        "src": "assets/images/dell.jpg",
+        "title": "Dell",
+        "price": 70000,
+        "description": "14'inches Dell laptop with 8GB RAM and SSD",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/macbook.jpg",
+        "title": "Macbook",
+        "price": 90000,
+        "description": "Brand new 15'inches Macbook-air (10%off)",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/laptopcase.jpg",
+        "title": "Cases",
+        "price": 1800,
+        "description": "Fits all size for 14-15'inches laptop easily.",
+        "quantity": 0
+      },
+      {
+        "src": "assets/images/dell.jpg",
+        "title": "Dell",
+        "price": 70000,
+        "description": "14'inches Dell laptop with 8GB RAM and SSD",
+        "quantity": 0
+      }
+    ]
+  }
+}

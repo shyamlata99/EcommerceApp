@@ -1,0 +1,163 @@
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3">
+        <div class="container-xl">
+          <a class="navbar-brand" href="#">
+            <img src="https://preview.webpixels.io/web/img/logos/clever-light.svg" class="h-8" alt="...">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-lg-auto">
+              <a class="nav-item nav-link active" href="../home" aria-current="page">Home</a>
+              <a class="nav-item nav-link" href="../home">Product</a>
+              <a class="nav-item nav-link" redirectTo="../home">Features</a>
+              <a class="nav-item nav-link" routerLink="../home">Pricing</a>
+            </div>
+            <div class="d-flex">
+              <input class="search-bar mr-5" type="search" [(ngModel)]="searchInput" placeholder="Search Products...">
+              <button class="btn-sm btn-success ml-5" (click)="searchProduct()" type="submit">Search</button>
+            </div>
+            <div class="cart">
+              <mat-icon *ngIf="number" matBadge="{{no}}" matBadgeColor="warn"></mat-icon><img (click)="cartbtn()" class="cartimg" src="https://image.flaticon.com/icons/png/128/726/726496.png">
+            </div>
+            <!-- <button type="button" (click)="cartbtn()" class="btn btn-dark">
+              <span class="badge badge-light">+1</span>
+              <span class="sr-only">🛒</span>
+            </button> -->
+
+          </div>
+        </div>
+      </nav>
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="#">
+                      Categories
+                  </a>
+              </li>
+              <li>
+                <a href="../" >All Products</a>
+              </li>
+              <li>
+                  <a href="../clothing" >Clothing</a>
+              </li>
+              <li>
+                  <a href="../footwear">Shoes/Footwear</a>
+              </li>
+              <li>
+                  <a href="../electronics">Electronics</a>
+              </li>
+              <li>
+                  <a href="../decor">Home Decor</a>
+              </li>
+              <li>
+                  <a href="../decor">Essentials</a>
+              </li>
+              <li>
+                <a routerLink="../clothing" >Clothing</a>
+              </li>
+              <li>
+                  <a routerLink="../footwear">Shoes/Footwear</a>
+              </li>
+              <li>
+                  <a routerLink="../electronics">Electronics</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Home Decor</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Essentials</a>
+              </li>
+              <li>
+                <a routerLink="../clothing" >Clothing</a>
+              </li>
+              <li>
+                  <a routerLink="../footwear">Shoes/Footwear</a>
+              </li>
+              <li>
+                  <a routerLink="../electronics">Electronics</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Home Decor</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Essentials</a>
+              </li>
+              <li>
+                <a routerLink="../clothing" >Clothing</a>
+              </li>
+              <li>
+                  <a routerLink="../footwear">Shoes/Footwear</a>
+              </li>
+              <li>
+                  <a routerLink="../electronics">Electronics</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Home Decor</a>
+              </li>
+              <li>
+                  <a routerLink="../decor">Essentials</a>
+              </li>
+        </ul>
+      </div>
+  </div>
+      <div class="container"> 
+          <div class="row offset-6">
+       <div class="forms">
+    <form class="mains">
+      <mat-form-field appearance="fill">
+        <mat-label>{{category}}</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="categories">
+          <mat-option (click)="all()">
+            All
+            </mat-option>
+          <mat-option (click)="electronics()">
+           Electronics
+           </mat-option>
+          <mat-option (click)='clothing()'>
+           Clothing
+          </mat-option>
+          <mat-option (click)='footwear()'>
+            Footwear
+           </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </form>
+    <form class="mains">
+<mat-form-field appearance="fill">
+      <mat-label>{{sortBy}}</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food">
+        
+        <mat-option (click)="none()">
+         none
+         </mat-option>
+        <mat-option (click)="lowtohigh()">
+         Price:Low to high
+        </mat-option>
+        <mat-option (click)="hightolow()">
+          Price:high to low
+         </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </form>
+    </div>
+    </div>
+    <hr>
+
+        <div *ngFor="let item of Products,let i=index" class="card" style="width: 15rem;">
+            <img src="{{item.src}}" class="card-img-top">  
+            <div class="card-body">
+              <div class="details">
+                <h2 class="card-title">{{item.title}}</h2>
+                    <h3>Rs. {{item.price}}</h3>
+                    <h4>{{item.description}}</h4> 
+                    <button (click)="addCart(i,item)" class="btn btn-danger">Add to cart</button>               
+              </div> 
+            </div> 
+          </div>
+        
+         
+        </div>
+  </body>

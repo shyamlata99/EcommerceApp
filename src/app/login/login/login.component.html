@@ -1,0 +1,59 @@
+<body class="body">
+    <!-- <div class="cont1">
+      <div class="row">
+        <span class="text1">Welcome</span>
+      </div>
+    </div> -->
+<div class="container">
+    <div class="row"> 
+        <div class="wrapper">
+            <div class="login">
+                <div class="login-form">
+                    <h1 class="login-title">Please Login</h1> 
+                        <div class="form-wrapper">
+                            <div class="input-wrapper">
+                                <form [formGroup]="login" (ngSubmit)="loginAuth($event)" >
+                                    <div [ngStyle]="{'display':'none'}"> 
+                                        <label class="label">Name</label>
+                                        <input type="name" name="user_name"  value={{uname}} formControlName="name">    
+                                    </div>
+                                    
+                                    <div> 
+                                        <label class="label">Email</label>
+                                        <input type="email" name="email_name" [(ngModel)]="mail" formControlName="email">
+                                        
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="label">Password</label>
+                                        <input type="password" [(ngModel)]="psw" formControlName="password"> 
+                                        
+                                    </div>
+                                    <div [ngStyle]="{'display':'none'}" >
+                                        <input type="text" name="message" value={{token}}> 
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-primary btn-md mt-3"  id="btn">Login</button>  
+                                    </div>
+                                </form><br>
+                                <h3>New user?<span><a class="navbar-brand" href="../register">Click here to Create an account</a></span></h3>
+                                <div id="box" [ngStyle]="{'display': (OTPflag==false) ? 'none' : 'block'}">
+                                    <div><br>
+                                        <h4>Please enter the OTP sent to your Email to verify &#10004;</h4>
+                                        <input type="text" placeholder="Enter OTP" [(ngModel)]="inputToken"><br><br> 
+                                    </div>
+                                    <div [ngStyle]="{'display' : (flag==false)? 'none' : 'block'}">
+                                        <h4>Oops Incorrect OTP!! 😣 </h4>
+                                    </div>
+                                    <div class="button"> 
+                                        <button (click)="confirm()" class="btn btn-danger">Confirm</button>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>  
