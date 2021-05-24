@@ -1,11 +1,10 @@
-@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
-
 html, body {
   margin: 0;
 }
 
 body{
   height:fit-content;
+  background-color: black;
 }
 
 .container{
@@ -23,22 +22,12 @@ footer{
 }
 
 #sidebar-wrapper {
-    position: fixed;
-            left: 250px;
-            width: 250px;
-            height: 77.5%;
-            margin-left: -250px;
-            overflow-y: scroll;
-
-      overflow-x: hidden;
-            background: #000;
-
-    -webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
--o-transition: all 0.5s ease;
-transition: all 0.5s ease;
-
+    position: fixed; 
+    width: 250px;
+    height: inherit;
+    background-color:blue;
 }
+
 
 .sidebar-nav {
 position: absolute;
@@ -91,7 +80,6 @@ color: #fff;
 background: none;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
   background-color: #242424;
   padding-top: 50px;

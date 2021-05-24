@@ -42,6 +42,7 @@
         </button> -->
         <!-- <div class="cart-icon ml-2">
           <i class="fa fa-shopping-cart">🛒</i>
+  
           <div class="cart-value">2</div>
         </div> -->
 
@@ -51,74 +52,29 @@
     </div>
   </nav>
 
-<div id="wrapper">
-  <div id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-          <li class="sidebar-brand">
-              <a href="#">
-                  Categories
-              </a> 
-          </li>
-          <li>
-              <a class="new-a" href="../products" >Clothing</a> 
-          </li>
-          <li>
-              <a href="../products">Shoes/Footwear</a>
-          </li>
-          <li>
-              <a href="../products">Electronics</a>
-          </li>
-          <li>
-              <a href="../products">Home Decor</a>
-          </li>
-          <li>
-              <a href="../products">Essentials</a>
-          </li>
-          <li>
-            <a routerLink="../clothing" >Clothing</a>
-        </li>
-        <li>
-            <a routerLink="../footwear">Shoes/Footwear</a>
-        </li>
-        <li>
-            <a routerLink="../electronics">Electronics</a>
-        </li>
-        <li>
-            <a routerLink="../decor">Home Decor</a>
-        </li>
-        <li>
-            <a routerLink="../decor">Essentials</a>
-        </li>
-        <li>
-          <a routerLink="../clothing" >Clothing</a>
-      </li>
-      <li>
-          <a routerLink="../footwear">Shoes/Footwear</a>
-      </li>
-      <li>
-          <a routerLink="../electronics">Electronics</a>
-      </li>
-      <li>
-          <a routerLink="../decor">Home Decor</a>
-      </li>
-      <li>
-          <a routerLink="../decor">Essentials</a>
-      </li>
-      <li>
-        <a routerLink="../clothing" >Clothing</a>
-    </li>
-    <li>
-        <a routerLink="../footwear">Shoes/Footwear</a>
-    </li>
-    <li>
-        <a routerLink="../electronics">Electronics</a>
-    </li>
-    <li>
-        <a routerLink="../decor">Home Decor</a>
-    </li>
-    <li>
-        <a routerLink="../decor">Essentials</a>
-    </li>
+  <div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Categories
+                </a>
+            </li> 
+            <li>
+              <a (click)="navigation()" >All Products</a> 
+            </li>
+            <li>
+                <a (click)="navigation()">Clothing</a> 
+            </li>
+            <li>
+                <a (click)="navigation()">Shoes/Footwear</a>
+            </li>
+            <li>
+                <a (click)="navigation()">Electronics</a>
+            </li>
+            <li>
+                <a (click)="navigation()">Home Decor</a> 
+            </li>
       </ul>
   </div>
 </div>

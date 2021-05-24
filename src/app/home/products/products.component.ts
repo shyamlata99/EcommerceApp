@@ -56,6 +56,7 @@ export class ProductsComponent implements OnInit {
   {value: 'Electronics', viewValue: 'Electronics'},
   {value: 'Clothing', viewValue: 'Clothing'},
   {value: 'Footwear', viewValue: 'Footwear'},
+  {value: 'Decor', viewValue: 'Decor'},
  ];
 
   getcurrentuser(){
@@ -96,7 +97,6 @@ export class ProductsComponent implements OnInit {
 
    cartbtn(){
       this.dbService.send.next(this.currentuser);
-      localStorage.setItem("currenntusername",JSON.stringify(this.currentuser.name));
       this.router.navigateByUrl('cart'); 
    }
 
@@ -133,10 +133,16 @@ export class ProductsComponent implements OnInit {
     this.category="Electronics";
     this.Products=this.productDetails.Electronics;
   }
+
   footwear(){
   this.category="Footwear";
   this.Products=this.productDetails.Footwear;
   }
+
+  decor(){
+    this.category="Decor";
+    this.Products=this.productDetails.HomeDecor;
+    }
 
   addCart(index,data){ 
     if(!this.currentuser.cart.includes(data)){ 

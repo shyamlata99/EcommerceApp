@@ -1,21 +1,21 @@
 <body>
   <div class="content container">
     <div class="main">
-      <h1>Cart Items</h1>
+      <h1>Look What All You Have Added {{name}}!</h1>
       <div id="shoppingcart">
-        <h4>Look what all you have added!</h4>
+        <h4>Cart Items</h4>
         <hr />
         <div *ngFor="let item of currentCart; let i = index" id="items">
-          <div class = "row">
+          <div class = "row my-4">
             <div class="col">
               <img src="{{ item.src }}" height="120px" width="100px"/> 
             </div>
-            <div class="col">
+            <div class="col title-block">
               <p>{{item.title | uppercase}} </p> 
             </div>
-            <div class="col">
-              <button (click)="reducequantity(i)"class="btn btn-danger btn-sm">-</button>  
-              <h6>Qty : &nbsp;{{item.quantity}}</h6> 
+            <div class="col button-grp"> 
+              <button (click)="reducequantity(i)"class="btn btn-danger btn-sm">-</button> &nbsp; 
+              <h6>Qty : &nbsp;{{item.quantity}}</h6> &nbsp;
               <button (click)="addquantity(i)"class="btn btn-success btn-sm">+</button>
             </div>    
           </div>    
@@ -24,11 +24,11 @@
         </div>
         
         
-      </div><br><br><br><br>
+      </div><br><br><br><br>   
   </div>
       <form (ngSubmit)="checkout($event)" >
         <div [ngStyle]="{'display':'none'}"> 
-          <input type="email" value={{name}} name="user_name" >
+          <input type="text" value={{name}} name="user_name" >
       </div>
 
         <div [ngStyle]="{'display':'none'}"> 
@@ -36,7 +36,7 @@
         </div>
         
         <div [ngStyle]="{'display':'none'}">
-            <input type="text" name="total" value={{subtotal}}> 
+            <input type="text" name="total" value={{subtotal}}> ok
         </div>
 
         <div [ngStyle]="{'display':'none'}" *ngFor="let item of currentCart; let i = index">
@@ -47,7 +47,7 @@
         <input type="text" name="quantity" value={{item.quantity}}> 
       </div>  
       <div class="button text-center"> 
-        <h4>Subtotal: {{ subtotal | currency:"INR":"symbol" }}
+        <h4>Total: {{ subtotal | currency:"INR":"symbol" }}
         <button class="btn btn-dark btn-lg">Confirm Order</button> </h4>
       </div>
       </form>

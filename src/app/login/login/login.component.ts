@@ -83,6 +83,7 @@ loginAuth(event){
             this.dbService.updateUserStatus(this.userCredentials[i].id,this.userCredentials[i]).subscribe(data=>{ 
             }); 
             this.dbService.send.next(this.userCredentials[i]);
+            localStorage.setItem('currentUser',this.userCredentials[i].id);   
             this.router.navigateByUrl('home');
             }
             console.log("confirmed");

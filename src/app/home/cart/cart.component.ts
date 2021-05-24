@@ -82,6 +82,7 @@ export class CartComponent implements OnInit {
           console.log(error.text);
         });
         alert("Your Order is Confirmed. Kindly check your mail to review your order summary");
+        localStorage.removeItem('currentUser')
       }
       
   }

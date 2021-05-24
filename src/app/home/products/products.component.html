@@ -36,23 +36,23 @@
                   <a href="#">
                       Categories
                   </a>
+              </li> 
+              <li>
+                <a (click)="all()" >All Products</a>
               </li>
               <li>
-                <a href="../" >All Products</a>
+                  <a (click)="clothing()" >Clothing</a> 
               </li>
               <li>
-                  <a href="../clothing" >Clothing</a>
+                  <a (click)="footwear()" >Shoes/Footwear</a>
               </li>
               <li>
-                  <a href="../footwear">Shoes/Footwear</a>
+                  <a (click)="electronics()">Electronics</a>
               </li>
               <li>
-                  <a href="../electronics">Electronics</a>
+                  <a (click)="decor()">Home Decor</a>
               </li>
-              <li>
-                  <a href="../decor">Home Decor</a>
-              </li>
-              <li>
+              <!-- <li>
                   <a href="../decor">Essentials</a>
               </li>
               <li>
@@ -99,8 +99,8 @@
               </li>
               <li>
                   <a routerLink="../decor">Essentials</a>
-              </li>
-        </ul>
+              </li> -->
+        </ul> 
       </div>
   </div>
       <div class="container"> 
@@ -121,6 +121,9 @@
           </mat-option>
           <mat-option (click)='footwear()'>
             Footwear
+           </mat-option>
+           <mat-option (click)='decor()'>
+            Decor
            </mat-option>
         </mat-select>
       </mat-form-field>

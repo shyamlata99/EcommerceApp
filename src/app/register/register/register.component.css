@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
- * ,*:after, *:before {
+* ,*:after, *:before {
     box-sizing: border-box;
-   font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
     width: 100%;
     background-color: #ffffff;
-    /* padding: 30px 15px; */
-    /* background: linear-gradient(45deg, #ffffff66, #ffffff66); */
     display: flex;
     align-items: center;
     justify-content: center;

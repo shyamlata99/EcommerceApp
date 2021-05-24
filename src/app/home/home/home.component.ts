@@ -9,6 +9,7 @@ import { DbServiceService } from 'src/app/services/db-service.service';
 })
 export class HomeComponent implements OnInit {
   isShown:boolean=false;
+
   constructor(private router:Router, private dbService:DbServiceService) { }
 
   ngOnInit(): void {
@@ -23,11 +24,13 @@ export class HomeComponent implements OnInit {
       this.currentUser=data; 
       // console.log(this.currentUser);
     });
+
+   
   }
 
-
-
-
+  navigation() {
+    this.router.navigateByUrl('products'); 
+  }
 
 
 }
