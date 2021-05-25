@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DbServiceService } from 'src/app/services/db-service.service';
 
-interface Filter1 {
+interface filter1 {
   value: string;
   viewValue: string;
 }
@@ -30,6 +30,7 @@ export class ProductsComponent implements OnInit {
   public searchInput:any ;
   public searchedItems = [];
   public selectedValue: any;
+  public src:any;
   public no : any;
   currentuser:any;
   public number:any;
@@ -44,30 +45,28 @@ export class ProductsComponent implements OnInit {
     this.getcurrentuser();
   }  
 
-  foods: filter2[] = [
+  categories: filter1[] = [
     {value:'none',viewValue:'None'},
-   {value: 'Price ↓ : Low to High', viewValue: 'Price ↓ : Low to High'},
-   {value: 'Price ↑ : High to Low', viewValue: 'Price ↑ : High to Low'}
- ];
+    {value: 'Electronics', viewValue: 'Electronics'},
+    {value: 'Clothing', viewValue: 'Clothing'},
+    {value: 'Footwear', viewValue: 'Footwear'},
+    {value: 'Decor', viewValue: 'Decor'},
+   ];
 
- categories: Filter1[] = [
-  
-  {value:'none',viewValue:'None'},
-  {value: 'Electronics', viewValue: 'Electronics'},
-  {value: 'Clothing', viewValue: 'Clothing'},
-  {value: 'Footwear', viewValue: 'Footwear'},
-  {value: 'Decor', viewValue: 'Decor'},
+  sort: filter2[] = [
+    {value:'none',viewValue:'None'},
+    {value: 'Price ↓ : Low to High', viewValue: 'Price ↓ : Low to High'},
+    {value: 'Price ↑ : High to Low', viewValue: 'Price ↑ : High to Low'}
  ];
 
   getcurrentuser(){
-
     let n = Number(localStorage.getItem("currentUser"));  
      n = n-1;
-
     this.dbService.userData().subscribe(data=>{
       this.currentuser=data[n]; 
       console.log(this.currentuser);
       this.cart=this.currentuser.cart;
+      this.src=this.currentuser.src;
     })
   }
 
@@ -97,7 +96,7 @@ export class ProductsComponent implements OnInit {
 
    cartbtn(){
       this.dbService.send.next(this.currentuser);
-      this.router.navigateByUrl('cart'); 
+      this.router.navigateByUrl('home/cart'); 
    }
 
    lowtohigh(){
@@ -113,15 +112,12 @@ export class ProductsComponent implements OnInit {
   }
   none(){
     this.sortBy="Sort by : ↓ ↑";
-   this.dbService.getProducts().subscribe(data=>{
+    this.dbService.getProducts().subscribe(data=>{
      this.productDetails=data;
      this.Products=this.productDetails.Products;
    })
   }
-  clothing(){
-    this.category="Clothing";
-    this.Products=this.productDetails.Clothing;
-  }
+
   all(){
     this.category="All Products";
     this.dbService.getProducts().subscribe(data=>{
@@ -129,6 +125,12 @@ export class ProductsComponent implements OnInit {
       this.Products=this.productDetails.Products;
     })
   }
+
+  clothing(){
+    this.category="Clothing";
+    this.Products=this.productDetails.Clothing;
+  }
+ 
   electronics(){
     this.category="Electronics";
     this.Products=this.productDetails.Electronics;
@@ -142,13 +144,13 @@ export class ProductsComponent implements OnInit {
   decor(){
     this.category="Decor";
     this.Products=this.productDetails.HomeDecor;
-    }
+  }
 
   addCart(index,data){ 
     if(!this.currentuser.cart.includes(data)){ 
       data.quantity++;
       this.cart.push(data);
-      this.currentuser.cart=this.cart;
+      this.currentuser.cart=this.cart; 
       this.no=this.currentuser.cart.length;
       if(this.no!=0){
         this.number=true;

@@ -3,7 +3,6 @@ import { FormBuilder, FormControl, FormGroup,  RequiredValidator,  Validators } 
 import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import { DbServiceService } from 'src/app/services/db-service.service';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-register',
@@ -13,8 +12,6 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class RegisterComponent implements OnInit {
 
   constructor(private fb:FormBuilder, private router:Router, private http:HttpClient, private dbService:DbServiceService) { }
-
-  
 
   ngOnInit(): void {  
   }
@@ -35,10 +32,6 @@ export class RegisterComponent implements OnInit {
   isClicked=false;
   public flag=false;
 
-  // registeration(){
-  //   this.router.navigateByUrl('login');
-  // }
-  
   onFileSelected(event) { 
     this.imgFile = <File>event.target.files[0];  
     console.log(this.imgFile);
@@ -53,44 +46,8 @@ export class RegisterComponent implements OnInit {
       this.dbService.addUser(this.register.value).subscribe(data=>{
       console.log(data);
       this.router.navigateByUrl('login'); 
-    })
-    
-
-    
-    // this.dbService.getuser().subscribe(data=>{
-    //   console.log(data);
-    // })
-    
-   
+    })  
 
   }  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // addUser(event){
-
-  //  this.isClicked=true;
-  //  emailjs.sendForm('service_x1d0ebk', 'template_zt1zj9s', event.target as HTMLFormElement, 'user_QiE4kMe5TqNOJ3EUlCk8p')
-  //    .then((result: EmailJSResponseStatus ,) => {
-  //      console.log(result.text); 
-  //    }, (error) => {
-  //      console.log(error.text);
-  //    });
-
-  // }
-
 
 }

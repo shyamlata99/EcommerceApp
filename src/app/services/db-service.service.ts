@@ -66,10 +66,4 @@ export class DbServiceService {
     return this.http.get(this.productsURL);
   } 
 
-  
-
-  // getuser(){
-  //   return this.http.get(this.userURL);
-  // }
-
 }

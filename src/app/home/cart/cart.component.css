@@ -1,5 +1,5 @@
 html, body {
-    margin:1rem;
+    margin:3rem;
 }
 
 body{
@@ -24,7 +24,7 @@ body{
     display: flex;
     flex-direction: row; 
     width: 400px;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
 }
 

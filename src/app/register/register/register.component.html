@@ -1,9 +1,4 @@
 <body class="body">
-    <!-- <div class="cont1">
-      <div class="row">
-        <span class="text1">Welcome</span>
-      </div>
-    </div> <br><br> -->
     <div class="container">
       <div class="row"> 
         <div class="wrapper">
@@ -13,7 +8,6 @@
               <div class="form-wrapper">
                 <div class="input-wrapper">
                   <form [formGroup]="register" (ngSubmit)="adduser()">
-  
                     <div [ngStyle]="{'display':'none'}">
                       <label class="label">Id</label>
                       <input type="text" class="form-control" placeholder="Id" formControlName="id">
@@ -37,39 +31,36 @@
                     <input type="email" class="form-control" placeholder="Email" name="user_email" formControlName="email">
                       <div style="color: red;" *ngIf="register.get('email').errors?.required">Required* </div>
                       <div style="color: red;" *ngIf="register.get('email').invalid && register.get('email').touched"> please check the email</div>
-                  </div>
-                  <br> 
-                  <div> 
-                    <label class="label">Address</label>
-                    <input type="text" class="form-control" placeholder="Address" formControlName="address">
-                    <div style="color: red;" *ngIf="register.get('address').errors?.required">Required* </div>
-                    <div *ngIf="register.get('address').errors?.required && register.get('address').touched"></div>
-                    
-                  </div>
-                  <br>
-                  <div>
-                    <label class="label">Password</label>
-                    <input type="Password" class="form-control" placeholder="Password" formControlName="password">
-                    <div style="color: red;" *ngIf="register.get('password').errors?.required">Required* </div>
-                    <div style="color: red;" *ngIf="register.get('password').errors?.pattern && register.get('password').touched">Password must contain three character categories: digits, lowercase characters and special characters.</div>
-                  </div>
-                  <br>
-                  <div>
-                    <label class="label">Confirm Password</label>
-                    <input type="Password" class="form-control" placeholder="Confirm Password" formControlName="Cpassword">
-                    <div style="color: red;" *ngIf="register.get('password').errors?.required"> Password is required</div>
-                    <div style="color: red;" *ngIf="register.get('password').errors?.pattern && register.get('password').touched">Password and Confirm Password is not same.</div>
-                  </div>
-                  <br>
-                  <button type="submit" class="btn action btn-primary" id="btn">Register</button>
-                  </form>
+                    </div>
+                    <br> 
+                    <div> 
+                      <label class="label">Address</label>
+                      <input type="text" class="form-control" placeholder="Address" formControlName="address">
+                      <div style="color: red;" *ngIf="register.get('address').errors?.required">Required* </div>
+                      <div *ngIf="register.get('address').errors?.required && register.get('address').touched"></div>  
+                    </div>
+                    <br>
+                    <div>
+                      <label class="label">Password</label>
+                      <input type="Password" class="form-control" placeholder="Password" formControlName="password">
+                      <div style="color: red;" *ngIf="register.get('password').errors?.required">Required* </div>
+                      <div style="color: red;" *ngIf="register.get('password').errors?.pattern && register.get('password').touched">Password must contain three character categories: digits, lowercase characters and special characters.</div>
+                    </div>
+                    <br>
+                    <div>
+                      <label class="label">Confirm Password</label>
+                      <input type="Password" class="form-control" placeholder="Confirm Password" formControlName="Cpassword">
+                      <div style="color: red;" *ngIf="register.get('password').errors?.required"> Password is required</div>
+                      <div style="color: red;" *ngIf="register.get('password').errors?.pattern && register.get('password').touched">Password and Confirm Password is not same.</div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn action btn-primary" id="btn">Register</button>
+                </form>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
-
-    
-  </body>
+  </div>  
+</body>

@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   public currentuser:any;
   public email:any;
   public name:any;
+  public src:any;
   public cart:any;
   public currentCart:any;
   public no:any;
@@ -32,8 +33,8 @@ export class CartComponent implements OnInit {
       this.currentCart=this.cart.cart;
       this.email=this.cart.email;
       this.name=this.cart.name;
-      console.log(this.email);
-      console.log(this.currentCart)
+      this.src=this.cart.src;
+      console.log(this.src);
       this.no=this.currentCart.length
       this.currentCart.forEach(element => {
         this.subtotal+=element.quantity*element.price;

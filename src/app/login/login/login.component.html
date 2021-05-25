@@ -14,8 +14,7 @@
                             <div class="input-wrapper">
                                 <form [formGroup]="login" (ngSubmit)="loginAuth($event)" >
                                     <div [ngStyle]="{'display':'none'}"> 
-                                        <label class="label">Name</label>
-                                        <input type="name" name="user_name"  value={{uname}} formControlName="name">    
+                                        <input type="text" name="user_name"  value={{uname}}>    
                                     </div>
                                     
                                     <div> 

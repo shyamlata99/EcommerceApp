@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   }
 
   navigation() {
-    this.router.navigateByUrl('products'); 
+    this.router.navigateByUrl('home/products'); 
   }
 
 

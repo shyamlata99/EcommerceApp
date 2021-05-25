@@ -8,8 +8,11 @@ body{
   }
 
   .cartimg {
-    max-width: 30%;
+    max-width: 28%;
     height: auto;
+}
+.cart{
+    margin-left:5rem;
 }
 
 .container{
@@ -67,6 +70,7 @@ span{
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
+    margin-left: 10rem;
 }
 
 .forms{

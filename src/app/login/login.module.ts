@@ -15,4 +15,8 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class LoginModule { }
+export class LoginModule {
+  constructor() {
+    console.log("Login Loaded"); 
+  }
+ }

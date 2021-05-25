@@ -9,7 +9,17 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSelectModule} from '@angular/material/select';
+import { RouterModule , Routes } from '@angular/router';
+import { HomeGuardsGuard } from '../homeGuard/home-guards.guard';
 
+const proRoutes: Routes = [
+    // {path: '' , children: [
+    {path:'' , component:HomeComponent},
+    {path:'products' , component:ProductsComponent},
+    {path:'cart' , component:CartComponent},
+// ] 
+]
+ 
 @NgModule({
   declarations: [
     HomeComponent,
@@ -18,6 +28,7 @@ import {MatSelectModule} from '@angular/material/select';
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild(proRoutes),
     FormsModule,
     MatButtonModule,
     MatTabsModule,
@@ -26,4 +37,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule,
   ]
 })
-export class HomeModule { }
+export class HomeModule { 
+  constructor() {
+    console.log("HomeModule Loaded"); 
+  }
+}

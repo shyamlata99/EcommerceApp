@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { DbServiceService } from 'src/app/services/db-service.service';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder, private router:Router, private http:HttpClient, private dbService:DbServiceService,) { }
 
   ngOnInit(): void {
-    this.generateOTP()
+    this.generateOTP();
   }
 
   public mail:any;
@@ -29,9 +30,7 @@ export class LoginComponent implements OnInit {
 
   login=new FormGroup({
     'password':new FormControl(''),
-    'email':new FormControl(''),
-    'name': new FormControl('')
-    
+    'email':new FormControl(''),   
 })
 
 generateOTP() {    
@@ -42,7 +41,6 @@ generateOTP() {
   }
   this.token=OTP;
 }
-
 
 loginAuth(event){
   this.dbService.userData().subscribe(data=>{
@@ -56,7 +54,7 @@ loginAuth(event){
       }
       else if (this.userCredentials[i].email==this.mail && this.userCredentials[i].password==this.psw && this.userCredentials[i].verification==false) {
         this.OTPflag=true;
-        this.uname=this.userCredentials[i].name;   
+        this.uname=this.userCredentials[i].name;
         emailjs.sendForm('service_flqf1mq', 'template_5pl60it', event.target as HTMLFormElement, 'user_PUpfOaE5nkjyfrqVC7qJ6')
         .then((result: EmailJSResponseStatus) => {
           console.log(result.text);

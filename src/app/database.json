@@ -1,87 +1,30 @@
 {
   "users": [
     {
-      "name": "Shyamlata",
-      "email": "shyamlata65@gmail.com",
-      "id": 1,
-      "verification": true,
-      "password": "Shyamlata@123",
-      "cPassword": "Shyamlata@123",
-      "cart": [
-        {
-          "src": "assets/images/laptopcase.jpg",
-          "title": "Cases",
-          "price": 18000,
-          "description": "Fits all size for 14-15'inches laptop easily.",
-          "quantity": 1
-        },
-        {
-          "src": "assets/images/560 (2).jpg",
-          "title": "Fashion",
-          "price": 700,
-          "description": "Roam around with comfort-Printed t-Shirts",
-          "quantity": 2
-        },
-        {
-          "src": "assets/images/560 (1).jpg",
-          "title": "Tops by Only",
-          "price": 500,
-          "description": " Summer wear Soft Cotton Tops and many more",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "name": "Abhay",
-      "email": "abhay24rockbitz@gmail.com",
+      "name": "Shyamlata Dubey",
+      "email": "shyamlata.dubey@mail.vinove.com",
       "address": "Noida",
-      "id": 2,
-      "password": "Abhay@123",
-      "Cpassword": "Abhay@123",
+      "id": 1,
+      "password": "Shyamlata@123",
+      "Cpassword": "Shyamlata@123",
       "verification": true,
       "cart": [
         {
-          "src": "assets/images/nike.jpg",
-          "title": "Nike",
-          "price": 6000,
-          "description": "For a secure and easy fit, check this out. Hurry!!",
-          "quantity": 1
-        },
-        {
-          "src": "assets/images/Hushpuppies-1.jpg",
-          "title": "Zara",
-          "price": 5000,
-          "description": "For a secure and easy fit, check this out.Hurry!!",
+          "src": "assets/images/cushion3.jpg",
+          "title": "Covers",
+          "price": 890,
+          "description": "cotton covers - hand wash only",
           "quantity": 2
-        }
-      ],
-      "src": "assets/images/3642.webp"
-    },
-    {
-      "name": "Sourav",
-      "email": "sourav.tarafdar06@gmail.com",
-      "address": "Noida Extension",
-      "id": 3,
-      "password": "Sourav@123",
-      "Cpassword": "Sourav@123",
-      "verification": true,
-      "cart": [
+        },
         {
           "src": "assets/images/adidas.jpeg",
           "title": "Adidas",
           "price": 7999,
           "description": "For a secure and easy fit, check this out.Hurry!!",
           "quantity": 2
-        },
-        {
-          "src": "assets/images/Hushpuppies-1.jpg",
-          "title": "Zara",
-          "price": 5000,
-          "description": "For a secure and easy fit, check this out.Hurry!!",
-          "quantity": 1
         }
       ],
-      "src": "assets/images/abhay.jpg"
+      "src": "assets/images/a1-9-640x640.jpg"
     }
   ],
   "Products": {

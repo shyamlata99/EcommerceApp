@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home/home.component';
+// import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './register/register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductsComponent } from './home/products/products.component';
-import { CartComponent } from './home/cart/cart.component';
-import { HomeGuardsGuard } from './homeGuard/home-guards.guard';
+// import { ProductsComponent } from './home/products/products.component';
+// import { CartComponent } from './home/cart/cart.component';
+
 
 const routes: Routes = [  
+  // {
+  //   path:'home',component:HomeComponent,canActivate:[HomeGuardsGuard] 
+  // },
   {
-    path:'home',component:HomeComponent,canActivate:[HomeGuardsGuard]
+    path:'home', loadChildren:()=> import('./home/home.module')
+    .then(mod=>mod.HomeModule)
   },
   {
     path:'login',component:LoginComponent   
@@ -18,12 +22,12 @@ const routes: Routes = [
   {
     path:'register',component:RegisterComponent 
   },
-  {
-    path:'products', component:ProductsComponent
-  },
-  {
-    path:'cart', component:CartComponent   
-  },
+  //{
+  //   path:'products', component:ProductsComponent
+  // },
+  // { 
+  //   path:'cart', component:CartComponent   
+  // },
   {
     path:'',redirectTo:'login',pathMatch:'full'
   },

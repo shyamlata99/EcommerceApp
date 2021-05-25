@@ -3,7 +3,7 @@
     <div class="main">
       <h1>Look What All You Have Added {{name}}!</h1>
       <div id="shoppingcart">
-        <h4>Cart Items</h4>
+        <h4>Cart Items 🛒</h4>
         <hr />
         <div *ngFor="let item of currentCart; let i = index" id="items">
           <div class = "row my-4">
@@ -28,7 +28,7 @@
   </div>
       <form (ngSubmit)="checkout($event)" >
         <div [ngStyle]="{'display':'none'}"> 
-          <input type="text" value={{name}} name="user_name" >
+          <input type="text" value={{name}} name="user_name" > 
       </div>
 
         <div [ngStyle]="{'display':'none'}"> 

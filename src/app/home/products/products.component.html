@@ -15,27 +15,26 @@
               <a class="nav-item nav-link" routerLink="../home">Pricing</a>
             </div>
             <div class="d-flex">
-              <input class="search-bar mr-5" type="search" [(ngModel)]="searchInput" placeholder="Search Products...">
+              <input class="search-bar" type="search" [(ngModel)]="searchInput" placeholder="Search Products...">
               <button class="btn-sm btn-success ml-5" (click)="searchProduct()" type="submit">Search</button>
             </div>
             <div class="cart">
-              <mat-icon *ngIf="number" matBadge="{{no}}" matBadgeColor="warn"></mat-icon><img (click)="cartbtn()" class="cartimg" src="https://image.flaticon.com/icons/png/128/726/726496.png">
+              <mat-icon *ngIf="number" matBadge="{{no}}" matBadgeColor="warn">
+              </mat-icon><img (click)="cartbtn()" class="cartimg" src="https://image.flaticon.com/icons/png/512/4290/4290854.png">
             </div>
-            <!-- <button type="button" (click)="cartbtn()" class="btn btn-dark">
-              <span class="badge badge-light">+1</span>
-              <span class="sr-only">🛒</span>
-            </button> -->
-
+            <div>
+              <!-- <h1 style="color: white;">hello!</h1> -->
+              <img class="img-fluid" src="{{src}}" height="300px" width="200px"/>                                  
+            </div>
           </div>
         </div>
-      </nav>
+    </nav>
+
     <div id="wrapper">
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
               <li class="sidebar-brand">
-                  <a href="#">
-                      Categories
-                  </a>
+                  <a href="#"> Categories</a>
               </li> 
               <li>
                 <a (click)="all()" >All Products</a>
@@ -52,115 +51,51 @@
               <li>
                   <a (click)="decor()">Home Decor</a>
               </li>
-              <!-- <li>
-                  <a href="../decor">Essentials</a>
-              </li>
-              <li>
-                <a routerLink="../clothing" >Clothing</a>
-              </li>
-              <li>
-                  <a routerLink="../footwear">Shoes/Footwear</a>
-              </li>
-              <li>
-                  <a routerLink="../electronics">Electronics</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Home Decor</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Essentials</a>
-              </li>
-              <li>
-                <a routerLink="../clothing" >Clothing</a>
-              </li>
-              <li>
-                  <a routerLink="../footwear">Shoes/Footwear</a>
-              </li>
-              <li>
-                  <a routerLink="../electronics">Electronics</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Home Decor</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Essentials</a>
-              </li>
-              <li>
-                <a routerLink="../clothing" >Clothing</a>
-              </li>
-              <li>
-                  <a routerLink="../footwear">Shoes/Footwear</a>
-              </li>
-              <li>
-                  <a routerLink="../electronics">Electronics</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Home Decor</a>
-              </li>
-              <li>
-                  <a routerLink="../decor">Essentials</a>
-              </li> -->
-        </ul> 
+          </ul> 
       </div>
   </div>
-      <div class="container"> 
-          <div class="row offset-6">
-       <div class="forms">
-    <form class="mains">
-      <mat-form-field appearance="fill">
-        <mat-label>{{category}}</mat-label>
-        <mat-select [(ngModel)]="selectedValue" name="categories">
-          <mat-option (click)="all()">
-            All
-            </mat-option>
-          <mat-option (click)="electronics()">
-           Electronics
-           </mat-option>
-          <mat-option (click)='clothing()'>
-           Clothing
-          </mat-option>
-          <mat-option (click)='footwear()'>
-            Footwear
-           </mat-option>
-           <mat-option (click)='decor()'>
-            Decor
-           </mat-option>
-        </mat-select>
-      </mat-form-field>
+
+  <div class="container"> 
+      <div class="row offset-6">
+    <div class="forms">
+      <form class="mains">
+        <mat-form-field appearance="fill">
+          <mat-label>{{category}}</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="categories">
+              <mat-option (click)="all()">All</mat-option>
+              <mat-option (click)="electronics()">Electronics</mat-option>
+              <mat-option (click)='clothing()'>Clothing</mat-option>
+              <mat-option (click)='footwear()'>Footwear</mat-option>
+              <mat-option (click)='decor()'>Decor</mat-option>
+            </mat-select>
+        </mat-form-field>
       </form>
-    <form class="mains">
-<mat-form-field appearance="fill">
-      <mat-label>{{sortBy}}</mat-label>
-      <mat-select [(ngModel)]="selectedValue" name="food">
-        
-        <mat-option (click)="none()">
-         none
-         </mat-option>
-        <mat-option (click)="lowtohigh()">
-         Price:Low to high
-        </mat-option>
-        <mat-option (click)="hightolow()">
-          Price:high to low
-         </mat-option>
-      </mat-select>
-    </mat-form-field>
-    </form>
+      <form class="mains">
+        <mat-form-field appearance="fill">
+        <mat-label>{{sortBy}}</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="sort">
+            <mat-option (click)="none()"> None</mat-option>
+            <mat-option (click)="lowtohigh()">Price:Low to high</mat-option>
+            <mat-option (click)="hightolow()">Price:high to low</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      </div>
     </div>
-    </div>
+
     <hr>
 
-        <div *ngFor="let item of Products,let i=index" class="card" style="width: 15rem;">
-            <img src="{{item.src}}" class="card-img-top">  
-            <div class="card-body">
-              <div class="details">
-                <h2 class="card-title">{{item.title}}</h2>
-                    <h3>Rs. {{item.price}}</h3>
-                    <h4>{{item.description}}</h4> 
-                    <button (click)="addCart(i,item)" class="btn btn-danger">Add to cart</button>               
-              </div> 
-            </div> 
-          </div>
-        
-         
-        </div>
-  </body>
+    <div *ngFor="let item of Products,let i=index" class="card" style="width: 15rem;">
+        <img src="{{item.src}}" class="card-img-top">  
+        <div class="card-body">
+          <div class="details">
+            <h2 class="card-title">{{item.title}}</h2>
+                <h3>Rs. {{item.price}}</h3>
+                <h4>{{item.description}}</h4> 
+                <button (click)="addCart(i,item)" class="btn btn-danger">Add to cart</button>               
+          </div> 
+        </div> 
+      </div>  
+  </div>
+
+</body>
