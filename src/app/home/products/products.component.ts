@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { DbServiceService } from 'src/app/services/db-service.service';
 
 interface filter1 {
+  key: string;
   value: string;
-  viewValue: string;
 }
 interface filter2 {
+  key: string;
   value: string;
-  viewValue: string;
 }
 
 
@@ -46,17 +46,17 @@ export class ProductsComponent implements OnInit {
   }  
 
   categories: filter1[] = [
-    {value:'none',viewValue:'None'},
-    {value: 'Electronics', viewValue: 'Electronics'},
-    {value: 'Clothing', viewValue: 'Clothing'},
-    {value: 'Footwear', viewValue: 'Footwear'},
-    {value: 'Decor', viewValue: 'Decor'},
+    {key:'none',value:'None'},
+    {key: 'Electronics', value: 'Electronics'},
+    {key: 'Clothing', value: 'Clothing'},
+    {key: 'Footwear',value: 'Footwear'},
+    {key: 'Decor', value: 'Decor'},
    ];
 
   sort: filter2[] = [
-    {value:'none',viewValue:'None'},
-    {value: 'Price ↓ : Low to High', viewValue: 'Price ↓ : Low to High'},
-    {value: 'Price ↑ : High to Low', viewValue: 'Price ↑ : High to Low'}
+    {key:'none',value:'None'},
+    {key: 'Price ↓ : Low to High', value: 'Price ↓ : Low to High'},
+    {key: 'Price ↑ : High to Low', value: 'Price ↑ : High to Low'}
  ];
 
   getcurrentuser(){

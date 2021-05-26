@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './register/register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeGuardsGuard } from './homeGuard/home-guards.guard';
 // import { ProductsComponent } from './home/products/products.component';
 // import { CartComponent } from './home/cart/cart.component';
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   // },
   {
     path:'home', loadChildren:()=> import('./home/home.module')
-    .then(mod=>mod.HomeModule)
+    .then(mod=>mod.HomeModule),canActivate:[HomeGuardsGuard]
   },
   {
     path:'login',component:LoginComponent   

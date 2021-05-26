@@ -10,6 +10,7 @@ body{
   .cartimg {
     max-width: 28%;
     height: auto;
+    
 }
 .cart{
     margin-left:5rem;
@@ -27,6 +28,11 @@ body{
 .card{
     margin: 20px;
     border-radius: 10px;
+    padding: 8px 8px 8px 8px;
+    border-style: groove;
+    border-width: 4px 4px 4px 4px;
+    border-color: #252558;
+    box-shadow: 10px 7px 10px 0px rgba(47, 85, 135, 0.5);
 }
 
 .card img{

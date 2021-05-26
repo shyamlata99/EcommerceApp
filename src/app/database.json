@@ -10,21 +10,61 @@
       "verification": true,
       "cart": [
         {
-          "src": "assets/images/cushion3.jpg",
-          "title": "Covers",
-          "price": 890,
-          "description": "cotton covers - hand wash only",
-          "quantity": 2
+          "src": "assets/images/Hushpuppies-1.jpg",
+          "title": "Zara",
+          "price": 5000,
+          "description": "For a secure and easy fit, check this out.Hurry!!",
+          "quantity": 1
         },
         {
           "src": "assets/images/adidas.jpeg",
           "title": "Adidas",
           "price": 7999,
           "description": "For a secure and easy fit, check this out.Hurry!!",
-          "quantity": 2
+          "quantity": 1
+        },
+        {
+          "src": "assets/images/560 (1).jpg",
+          "title": "Tops by Only",
+          "price": 500,
+          "description": " Summer wear Soft Cotton Tops and many more",
+          "quantity": 1
+        },
+        {
+          "src": "assets/images/macbook.jpg",
+          "title": "Macbook",
+          "price": 90000,
+          "description": "Brand new 15'inches Macbook-air (10%off)",
+          "quantity": 1
         }
       ],
       "src": "assets/images/a1-9-640x640.jpg"
+    },
+    {
+      "name": "Shyamlata",
+      "email": "shyamlata65@gmail.com",
+      "address": "Noida",
+      "id": 2,
+      "password": "Shyam@123",
+      "Cpassword": "Shyam@123",
+      "verification": true,
+      "cart": [
+        {
+          "src": "assets/images/Hushpuppies-1.jpg",
+          "title": "Zara",
+          "price": 5000,
+          "description": "For a secure and easy fit, check this out.Hurry!!",
+          "quantity": 4
+        },
+        {
+          "src": "assets/images/Hushpuppies-1.jpg",
+          "title": "Zara",
+          "price": 5000,
+          "description": "For a secure and easy fit, check this out.Hurry!!",
+          "quantity": 1
+        }
+      ],
+      "src": "assets/images/astha.jpg"
     }
   ],
   "Products": {
@@ -51,10 +91,10 @@
         "quantity": 0
       },
       {
-        "src": "assets/images/560 (1).jpg",
+        "src": "assets/images/top.jpg",
         "title": "Tops by Only",
-        "price": 500,
-        "description": " Summer wear Soft Cotton Tops and many more",
+        "price": 550,
+        "description": "Fresh breathable material to keep your skin safe.",
         "quantity": 0
       },
       {
@@ -79,9 +119,9 @@
         "quantity": 0
       },
       {
-        "src": "assets/images/Hushpuppies-1.jpg",
+        "src": "assets/images/zara.jpg",
         "title": "Zara",
-        "price": 5000,
+        "price": 8299,
         "description": "For a secure and easy fit, check this out.Hurry!!",
         "quantity": 0
       },
@@ -107,9 +147,9 @@
         "quantity": 0
       },
       {
-        "src": "assets/images/cushion1.jpg",
+        "src": "assets/images/cushionn.jpg",
         "title": "Cushions",
-        "price": 999,
+        "price": 2499,
         "description": "For comfortable spaces, add these cushions.",
         "quantity": 0
       },
@@ -135,9 +175,9 @@
         "quantity": 0
       },
       {
-        "src": "assets/images/dell.jpg",
+        "src": "assets/images/hp.webp",
         "title": "Dell",
-        "price": 70000,
+        "price": 80000,
         "description": "14'inches Dell laptop with 8GB RAM and SSD",
         "quantity": 0
       }
